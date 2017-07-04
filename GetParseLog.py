@@ -33,9 +33,9 @@ def ParseLog(commitLines):
 def GetLogInfo():
     #print('GetLogInfo()')
     command = ['git','log','-2']
-    p       = subprocess.Popen(command,stdout = subprocess.PIPE)  #Is pipe need close??
-    stdout,stderr = p.communicate()
-    #stdout  = subprocess.check_output(command)
+    #p       = subprocess.Popen(command,stdout = subprocess.PIPE)  #Is pipe need close??
+    #stdout,stderr = p.communicate()
+    stdout  = subprocess.check_output(command)
     return stdout
 if __name__ == '__main__':
     info = GetLogInfo()
